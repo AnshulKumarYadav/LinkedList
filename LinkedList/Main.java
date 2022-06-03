@@ -21,5 +21,8 @@ public class Main {
 		
 		System.out.println(list.getSize());
 		
+		list.addAnyWhere(0);
+		list.printList();
+		
 	}
 }

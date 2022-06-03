@@ -42,9 +42,21 @@ public class Linked_List {
 	}
 	
 //	<<---------Insert/add node anywhere in the linkedlist------------>>
-	public void addAnyWhere()
+	public void addAnyWhere(int pos)
 	{
-		
+		if(pos==0)
+		{
+			head = head.next;
+			return;
+		}
+		Node previousNode = head;
+		int i=0;
+		while(i<pos-1)
+		{
+			previousNode = previousNode.next;
+			i++;
+		}
+		previousNode.next = previousNode.next.next;
 	}
 	
 //	<<------------------Delete from head in the linkedlist------------>>
